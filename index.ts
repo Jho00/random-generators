@@ -1,4 +1,4 @@
-import {RandomGeneratorFabric} from "./lib/RandomGeneratorFabric";
+import RandomGeneratorFabric from "./lib/RandomGeneratorFabric";
 import IGenerator from "./lib/common/IGenerator";
 import GeneratorType from "./lib/common/GeneratorType";
 

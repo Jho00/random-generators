@@ -6,6 +6,7 @@ import IGenerator from "../common/IGenerator";
  */
 class NeymanGenerator implements IGenerator {
     private _nextNumber: number = 9889;
+
     generate(): number {
         const result = this._nextNumber / 10000;
         this._nextNumber = this.getNewNextNumber();
@@ -14,7 +15,7 @@ class NeymanGenerator implements IGenerator {
 
     private getNewNextNumber(): number {
         const sq = this._nextNumber * this._nextNumber;
-        return Math.floor( (sq % 1000000 ) / 100);
+        return Math.floor((sq % 1000000) / 100);
     }
 
 }
