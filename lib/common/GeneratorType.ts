@@ -2,7 +2,8 @@ enum GeneratorType {
     Random,
     Neyman,
     LCG,
-    ICG
+    ICG,
+    KK2
 }
 
 export default GeneratorType;

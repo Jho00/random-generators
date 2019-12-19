@@ -4,6 +4,7 @@ import RandomGenerator from "./generators/RandomGenerator";
 import NeymanGenerator from "./generators/NeymanGenerator";
 import LCGenerator from "./generators/LCGenerator";
 import ICGenerator from "./generators/ICGenerator";
+import {KK2Generator} from "./generators/KK2Generator";
 
 const RandomGeneratorFabric = {
     getGenerator(type: GeneratorType): IGenerator {
@@ -16,6 +17,8 @@ const RandomGeneratorFabric = {
                 return new LCGenerator();
             case GeneratorType.ICG:
                 return new ICGenerator();
+            case GeneratorType.KK2:
+                return new KK2Generator();
             default:
                 throw new Error(`Unresolved generator type: ${type}`);
         }
