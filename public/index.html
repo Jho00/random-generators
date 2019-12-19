@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Генераторы псевдослучайных чисел</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+<header>
+    <form action="">
+        <label for="count-number-input"> Количество расчитываемых чисел</label>
+        <input id="count-number-input" type="number" min="0" max="100000">
+        <button id="count-action">Рассчитать</button>
+    </form>
+</header>
+
+<main>
+    <div class="generators-result">
+        <h3>Генератор рандом</h3>
+        <div class="results">
+            <div class="avg-value">AVG: <span></span></div>
+            <div class="dispersion-value">Dispersion: <span></span></div>
+            <div class="min-value">Min: <span></span></div>
+            <div class="max-value">Max: <span></span></div>
+        </div>
+    </div>
+    <div class="generators-result">
+        <h3>Генератор Фон-Неймана</h3>
+        <div class="results">
+            <div class="avg-value">AVG: <span></span></div>
+            <div class="dispersion-value">Dispersion: <span></span></div>
+            <div class="min-value">Min: <span></span></div>
+            <div class="max-value">Max: <span></span></div>
+        </div>
+    </div>
+    <div class="generators-result">
+        <h3>Линейный конгруэнтный генератор</h3>
+        <div class="results">
+            <div class="avg-value">AVG: <span></span></div>
+            <div class="dispersion-value">Dispersion: <span></span></div>
+            <div class="min-value">Min: <span></span></div>
+            <div class="max-value">Max: <span></span></div>
+        </div>
+    </div>
+    <div class="generators-result">
+        <h3>Инверсный конгруэнтный генератор</h3>
+        <div class="results">
+            <div class="avg-value">AVG: <span></span></div>
+            <div class="dispersion-value">Dispersion: <span></span></div>
+            <div class="min-value">Min: <span></span></div>
+            <div class="max-value">Max: <span></span></div>
+        </div>
+    </div>
+</main>
+
 <noscript>
-    Включи JavaScript, динозав ебаный
+    Включи JavaScript, динозавр ебаный
 </noscript>
 <script src="js/bundle.js"></script>
 </body>

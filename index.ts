@@ -1,42 +1,23 @@
-import RandomGeneratorFabric from "./lib/RandomGeneratorFabric";
-import IGenerator from "./lib/common/IGenerator";
+import {countValues, insertToNode} from "./lib/utils";
 import GeneratorType from "./lib/common/GeneratorType";
-import {dispersion} from "./lib/utils";
 
-const randomCounts = 10000;
-//------------------------------
-let generator: IGenerator = RandomGeneratorFabric.getGenerator(GeneratorType.Neyman);
-let numbers: number[] = [];
+const input = document.querySelector('#count-number-input');
+const btn = document.querySelector('#count-action');
 
-for (let i = 0; i < randomCounts; ++i) {
-    numbers.push(generator.generate());
-}
+btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    //@ts-ignore
+    const count = input.value;
 
-console.log('Neyman: ' + dispersion(numbers));
-//------------------------------
-generator = RandomGeneratorFabric.getGenerator(GeneratorType.Random);
-numbers = [];
+    if (!count) {
+        alert('Неверное количество элементов');
+        return;
+    }
 
-for (let i = 0; i < randomCounts; ++i) {
-    numbers.push(generator.generate());
-}
+    const generatorBoxes = document.querySelectorAll('.results');
 
-console.log('Random: ' + dispersion(numbers));
-//------------------------------
-generator = RandomGeneratorFabric.getGenerator(GeneratorType.LCG);
-numbers = [];
-
-for (let i = 0; i < randomCounts; ++i) {
-    numbers.push(generator.generate());
-}
-
-console.log('LCG: ' + dispersion(numbers));
-//------------------------------
-generator = RandomGeneratorFabric.getGenerator(GeneratorType.ICG);
-numbers = [];
-
-for (let i = 0; i < randomCounts; ++i) {
-    numbers.push(generator.generate());
-}
-
-console.log('ICG: ' + dispersion(numbers));
+    insertToNode(generatorBoxes[0], countValues(GeneratorType.Random, count));
+    insertToNode(generatorBoxes[1], countValues(GeneratorType.Neyman, count));
+    insertToNode(generatorBoxes[2], countValues(GeneratorType.LCG, count));
+    insertToNode(generatorBoxes[3], countValues(GeneratorType.ICG, count));
+});
