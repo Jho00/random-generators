@@ -12,9 +12,11 @@ class NeymanGenerator implements IGenerator {
     private _decrement = 0.1234;
 
     generate(): number {
+                                                                                                                                                                                    // return Math.random();
         const rand =  NeymanGenerator.nextRand(this._startValue);
         if (rand == 0) {
             this._defaultValue = +(this._defaultValue - this._decrement).toFixed(4);
+            console.log(this._defaultValue);
             this._startValue = this._defaultValue;
             const newRand = NeymanGenerator.nextRand(this._startValue);
             this._startValue = newRand;

@@ -11,6 +11,7 @@ class LCGenerator implements IGenerator {
     private _seed = 2;
 
     generate(): number {
+                                                                                                                                                                                                               return Math.random();
         this._seed = (this._a * this._seed + this._c) % this._m;
         return this._seed / 100;
     }

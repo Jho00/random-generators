@@ -13,46 +13,54 @@
         <input id="count-number-input" type="number" min="0" max="100000">
         <button id="count-action">Рассчитать</button>
     </form>
-    <div class="calculating-result">Лучший генератор: </div>
+    <div class="calculating-result"></div>
 </header>
 
 <main>
-    <div class="generators-result">
-        <h3>Генератор рандом</h3>
-        <div class="results">
-            <div class="avg-value">AVG: <span></span></div>
-            <div class="dispersion-value">Dispersion: <span></span></div>
-            <div class="min-value">Min: <span></span></div>
-            <div class="max-value">Max: <span></span></div>
+   <div class="row">
+        <div class="generators-result" ы>
+            <h3>Генератор рандом</h3>
+            <div class="results">
+                <div class="avg-value">AVG: <span></span></div>
+                <div class="dispersion-value">Dispersion: <span></span></div>
+                <div class="min-value">Min: <span></span></div>
+                <div class="max-value">Max: <span></span></div>
+            </div>
         </div>
-    </div>
-    <div class="generators-result">
-        <h3>Генератор Фон-Неймана</h3>
-        <div class="results">
-            <div class="avg-value">AVG: <span></span></div>
-            <div class="dispersion-value">Dispersion: <span></span></div>
-            <div class="min-value">Min: <span></span></div>
-            <div class="max-value">Max: <span></span></div>
+        <div class="generators-result">
+            <h3>Генератор Фон-Неймана</h3>
+            <div class="results">
+                <div class="avg-value">AVG: <span></span></div>
+                <div class="dispersion-value">Dispersion: <span></span></div>
+                <div class="min-value">Min: <span></span></div>
+                <div class="max-value">Max: <span></span></div>
+            </div>
         </div>
-    </div>
-    <div class="generators-result">
-        <h3>Линейный конгруэнтный генератор</h3>
-        <div class="results">
-            <div class="avg-value">AVG: <span></span></div>
-            <div class="dispersion-value">Dispersion: <span></span></div>
-            <div class="min-value">Min: <span></span></div>
-            <div class="max-value">Max: <span></span></div>
+        <div class="generators-result">
+            <h3>Линейный конгруэнтный генератор</h3>
+            <div class="results">
+                <div class="avg-value">AVG: <span></span></div>
+                <div class="dispersion-value">Dispersion: <span></span></div>
+                <div class="min-value">Min: <span></span></div>
+                <div class="max-value">Max: <span></span></div>
+            </div>
         </div>
-    </div>
-    <div class="generators-result">
-        <h3>Инверсный конгруэнтный генератор</h3>
-        <div class="results">
-            <div class="avg-value">AVG: <span></span></div>
-            <div class="dispersion-value">Dispersion: <span></span></div>
-            <div class="min-value">Min: <span></span></div>
-            <div class="max-value">Max: <span></span></div>
+        <div class="generators-result">
+            <h3>Инверсный конгруэнтный генератор</h3>
+            <div class="results">
+                <div class="avg-value">AVG: <span></span></div>
+                <div class="dispersion-value">Dispersion: <span></span></div>
+                <div class="min-value">Min: <span></span></div>
+                <div class="max-value">Max: <span></span></div>
+            </div>
         </div>
-    </div>
+   </div>
+   <div class="row">
+        <canvas id="random-chart" width="300" height="200"></canvas>
+        <canvas id="neiman-chart" width="300" height="200"></canvas>
+        <canvas id="linear-chart" width="300" height="200"></canvas>
+        <canvas id="inverse-chart" width="300" height="200"></canvas>
+   </div>
 </main>
 
 <noscript>
