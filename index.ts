@@ -20,4 +20,10 @@ btn.addEventListener('click', (event) => {
     insertToNode(generatorBoxes[1], countValues(GeneratorType.Neyman, count));
     insertToNode(generatorBoxes[2], countValues(GeneratorType.LCG, count));
     insertToNode(generatorBoxes[3], countValues(GeneratorType.ICG, count));
+
+    const valuesMap = new Map<number, Element>();
+    document.querySelectorAll('.generators-result').forEach(el => valuesMap.set(+el.querySelector('.results > .dispersion-value > span').innerHTML, el));
+    const calculatingResult = document.querySelector('.calculating-result') as HTMLElement;
+    calculatingResult.innerHTML = calculatingResult.innerHTML + ' ' + valuesMap.get(Math.min(...valuesMap.keys())).querySelector('h3').innerHTML;
+    calculatingResult.style.display = 'block';
 });
